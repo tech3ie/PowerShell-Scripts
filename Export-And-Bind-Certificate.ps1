@@ -468,6 +468,15 @@ try {
     Write-Host "Certificate Export and IIS Binding Script" -ForegroundColor Cyan
     Write-Host "=" * 50
     
+    # Debug: Show all parameters
+    Write-Host "Debug: Parameters received:" -ForegroundColor Gray
+    Write-Host "  CommonName: '$CommonName'" -ForegroundColor Gray
+    Write-Host "  WebsiteName: '$WebsiteName'" -ForegroundColor Gray
+    Write-Host "  ListWebsites: $ListWebsites" -ForegroundColor Gray
+    Write-Host "  ListCertificates: $ListCertificates" -ForegroundColor Gray
+    Write-Host "  RemoveBinding: $RemoveBinding" -ForegroundColor Gray
+    Write-Host ""
+    
     # Check if running on Windows
     if ($env:OS -ne "Windows_NT") {
         Write-Error "This script requires Windows operating system."
