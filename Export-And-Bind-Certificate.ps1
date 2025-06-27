@@ -394,9 +394,9 @@ function Set-IISCertificateBinding {
         if ($RemoveBinding) {
             if ($existingBinding) {
                 Remove-WebBinding -Name $WebsiteName -BindingInformation $bindingInfo -Protocol $Protocol
-                Write-Host "Removed binding: $Protocol://$bindingInfo" -ForegroundColor Green
+                Write-Host ("Removed binding: {0}://{1}" -f $Protocol, $bindingInfo) -ForegroundColor Green
             } else {
-                Write-Host "Binding not found: $Protocol://$bindingInfo" -ForegroundColor Yellow
+                Write-Host ("Binding not found: {0}://{1}" -f $Protocol, $bindingInfo) -ForegroundColor Yellow
             }
             return
         }
@@ -425,7 +425,7 @@ function Set-IISCertificateBinding {
             Set-WebBinding -Name $WebsiteName -Protocol $Protocol -BindingInformation $bindingInfo -PropertyName "certificateHash" -Value $CertificateThumbprint
         }
         
-        Write-Host "Certificate bound successfully to $Protocol://$bindingInfo" -ForegroundColor Green
+        Write-Host ("Certificate bound successfully to {0}://{1}" -f $Protocol, $bindingInfo) -ForegroundColor Green
         Write-Host "Website: $WebsiteName" -ForegroundColor Gray
         Write-Host "Certificate: $($cert.Subject)" -ForegroundColor Gray
         Write-Host "Thumbprint: $CertificateThumbprint" -ForegroundColor Gray
