@@ -61,9 +61,9 @@
     .\Bind-Certificate-ByName.ps1 -ListCertificates
 
 .NOTES
-    Author: PowerShell Scripts
-    Version: 1.0
-    Date: $(Get-Date -Format "yyyy-MM-dd")
+    Author: Keval Varia
+    Version: 1.0.0
+    Date: 2025-06-27
 #>
 
 param(
