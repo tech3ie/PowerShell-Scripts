@@ -80,14 +80,29 @@ param(
     [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$WebsiteName,
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$ApplicationName,
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$IPAddress = "*",
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "RemoveBinding")]
     [int]$Port = 443,
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$HostHeader = "",
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$Protocol = "https",
     
     [Parameter(ParameterSetName = "ListWebsites")]
@@ -99,6 +114,8 @@ param(
     [Parameter(ParameterSetName = "RemoveBinding")]
     [switch]$RemoveBinding,
     
+    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName")]
     [switch]$Force
 )
 
