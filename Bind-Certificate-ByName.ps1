@@ -67,17 +67,17 @@
 #>
 
 param(
-    [Parameter(ParameterSetName = "BindByCommonName")]
+    [Parameter(ParameterSetName = "BindByCommonName", Mandatory = $true)]
     [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$CommonName,
     
-    [Parameter(ParameterSetName = "BindByFriendlyName")]
+    [Parameter(ParameterSetName = "BindByFriendlyName", Mandatory = $true)]
     [Parameter(ParameterSetName = "RemoveBinding")]
     [string]$FriendlyName,
     
-    [Parameter(ParameterSetName = "BindByCommonName")]
-    [Parameter(ParameterSetName = "BindByFriendlyName")]
-    [Parameter(ParameterSetName = "RemoveBinding")]
+    [Parameter(ParameterSetName = "BindByCommonName", Mandatory = $true)]
+    [Parameter(ParameterSetName = "BindByFriendlyName", Mandatory = $true)]
+    [Parameter(ParameterSetName = "RemoveBinding", Mandatory = $true)]
     [string]$WebsiteName,
     
     [Parameter(ParameterSetName = "BindByCommonName")]
@@ -111,7 +111,7 @@ param(
     [Parameter(ParameterSetName = "ListCertificates")]
     [switch]$ListCertificates,
     
-    [Parameter(ParameterSetName = "RemoveBinding")]
+    [Parameter(ParameterSetName = "RemoveBinding", Mandatory = $true)]
     [switch]$RemoveBinding,
     
     [Parameter(ParameterSetName = "BindByCommonName")]
